@@ -41,9 +41,9 @@ label natasha:
     $ natasha_points = 0
     scene bg police clue with dissolve
     virginia "The red lipstick!"
-
-    natasha "Girl. What are you doing here?"
+    natasha "Girl. What are you doing here with that lipstick?"
     natasha "What is your name? Speak!"
+
     menu:
         "Vera Burova.":
             natasha "Do you think I cannot detect a lie when I hear one?"
