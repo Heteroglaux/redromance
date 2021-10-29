@@ -49,17 +49,17 @@ label start:
 
     show virginia idle
 
-    virginia "My life was a mess the last two months."
-    virginia "I wasn't feeling too good after breaking up with Skye..."
-    virginia "But a week ago I received this love letter... From USSR."
-    virginia "Somebody has written that they admire my work in United Working Alliance. And thet they want to invite me to USSR."
-    virginia "To build a better, communist world together."
+    virginia "My world was a mess over the last two months."
+    virginia "I was devastated after breaking up with Skye and my rich Aunt June kept trying to interfere in my life."
+    virginia "But a week ago I received this letter... from the USSR."
+    virginia "Someone had written that they'd admired my work with the United Working Alliance, and that they wanted to invite me to the USSR."
+    virginia "They said they believed we could build a better, communist world together."
 
     scene bg street with fade
 
     virginia "I decided to take a trip to Moscow."
-    virginia "The letter is completely anonymus. No name or address... Only the warm words of love and admiration."
-    virginia "I don't have a lot of hope, but maybe I can find the author."
+    virginia "The letter I received was completely anonymous. No name or address... only the warm words of love and admiration."
+    virginia "I didn't have a lot of hope, but perhaps I could find the author."
     virginia "I think there are couple of obvious clues on the envelope."
 
     call screen envelope
@@ -79,7 +79,7 @@ label clue1_comrade:
 
 label clue1_natasha:
 
-    virginia "A Top Secret stamp. Looks very policey."
+    virginia "A Top Secret stamp. Looks very official."
     virginia "Could this letter be sent from the Soviet Police Department?"
 
     call screen natasha_street
@@ -88,7 +88,7 @@ label clue1_natasha:
 
 label clue1_ulyana:
 
-    virginia "Here's a factory bulding depicted on this stamp."
+    virginia "There's a factory bulding depicted on this stamp."
     virginia "I believe I've seen the same factory in the city."
 
     call screen ulyana_street
@@ -97,7 +97,7 @@ label clue1_ulyana:
 
 label comrade_wrong_building:
     
-    virginia "Hm-m-m, I don't think I need go there."
+    virginia "Hmm, I don't think I need go there."
 
     call screen comrade_street
 
