@@ -2,11 +2,7 @@
 errors listed below, and try again.
 
 
-The label comrade_good_end is defined twice, at File "game/library.rpy", line 99:
-label comrade_good_end:
-and File "game/library.rpy", line 105:
-label comrade_good_end:
-
+File "game/library.rpy", line 97: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Oct 28 19:25:55 2021
+Fri Oct 29 14:02:26 2021

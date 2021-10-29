@@ -1,28 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/police.rpy", line 42, in script
-    scene bg police clue with dissovle
-  File "game/police.rpy", line 42, in <module>
-    scene bg police clue with dissovle
-NameError: name 'dissovle' is not defined
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/police.rpy", line 42, in script
-    scene bg police clue with dissovle
-  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/ast.py", line 1439, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/python.py", line 2276, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/police.rpy", line 42, in <module>
-    scene bg police clue with dissovle
-NameError: name 'dissovle' is not defined
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/loadsave.py", line 394, in save
+    roots = renpy.game.log.freeze(None)
+  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/python.py", line 2142, in freeze
+    self.complete(False)
+  File "/Users/maya.vasylieva/Documents/renpy-7.4.10-sdk/renpy/python.py", line 1726, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 Darwin-20.6.0-x86_64-i386-64bit
 Ren'Py 7.4.10.2178
 Red Romance 1.0
-Fri Oct 29 10:27:24 2021
+Fri Oct 29 14:03:56 2021

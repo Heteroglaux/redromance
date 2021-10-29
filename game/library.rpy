@@ -64,8 +64,9 @@ label comrade:
     comradel "A place where the worker is celebrated, perhaps."
     virginia "..."
     "Comrade L. took the book and opened it on a random page."
-    comradel "As you must know, the world nowadays is corrupt. Common people aren't living the lives they deserve. The poor only become poorer, while the rich constantly get richer."
-    comradel "Yet who controls the means production? Who provides the sweat and toil? Whom do you think should receive the rewards of their work?"
+    comradel "As you must know, the world nowadays is corrupt. Common people aren't living the lives they deserve. The poor only become poorer, while the rich get richer."
+    comradel "Yet who controls the means production? Who provides the sweat and toil?"
+    comradel "Whom do you think should receive the rewards of their work?"
 
     menu:
         "Everyone!":
@@ -91,7 +92,8 @@ label comrade:
     menu:
         "Dictatorship of the proletariat!":
             $ comrade_points += 1
-            comradel "Exactly how I think."
+            comradel "Exactly! We who control the means of production also must control the product itself."
+            comradel "We have power, if only we will take it!"
         "Liberalism!":
             comradel "The philosophy of cowards!"
             comradel "The ruling classes will always turn liberalism to their own ends."
