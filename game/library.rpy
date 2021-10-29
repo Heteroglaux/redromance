@@ -20,10 +20,12 @@ screen library_clue:
 label library:
     scene bg library with fade
 
+    show virginia idle at right with moveinright
+
     virginia "I entered a large, quiet library."
     virginia "There aren't many people here. Maybe I can ask around?"
 
-    pause 0.5
+    hide virginia with fade
 
     virginia "The letter!"
     virginia "I think it can tell me something about its author."
@@ -34,6 +36,7 @@ label comrade_clue2:
      
      virginia "There's a quote in the end of the letter..."
      virginia "The last capitalist we hang shall be the one who sold us the rope."
+     virginia "I think I've read it somewhere..."
 
      call screen library_clue
 
@@ -44,7 +47,11 @@ label comrade:
     virginia "Das Kapital!"
     virginia "The quote is definitely from the book."
     "I heard a pleasant voice behind my back."
+
+    show comrade idle at right with moveinright
     "???" "I see you have a excellent taste in literature."
+
+    show virginia flip at left with moveinleft
     virginia "Excuse me?"
     "???" "It's Marx! I've read the book dozens of times."
     virginia "Maybe even quoted it somewhere?"
@@ -61,15 +68,15 @@ label comrade:
     comradel "Yet who controls the means production? Who provides the sweat and toil? Whom do you think should receive the rewards of their work?"
 
     menu:
+        "Everyone!":
+            comradel "Everyone? Even the bourgeois? Even those who fatten themselves on our labor?"
         "Whomever owns them by law.":
             comradel "You speak like a child. The law exists only to support the unjust system!"
         "The working class.":
             $ comrade_points += 1
             comradel "You are wise for your years, Miss Virginia. Indeed, the workers should own their own work."
-        "Everyone!":
-            comradel "Everyone? Even the bourgeois? Even those who fatten themselves on our labor?"
 
-    "What do you think about sex?"        
+    comradel "What do you think about sex?"        
     menu:
         "Why do you ask?":
             comradel "Your evasiveness does not inspire confidence."
@@ -80,14 +87,14 @@ label comrade:
             comradel "I see you are still a child, wasting your time with idle fancies."
             comradel "I was once like you. Now I derive pleasure only from the struggle of the proletariat."
 
-    "What is the best political regime?"        
+    comradel "What is the best political regime?"        
     menu:
-        "Liberalism!":
-            comradel "The philosophy of cowards!"
-            comradel "The ruling classes will always turn liberalism to their own ends."
         "Dictatorship of the proletariat!":
             $ comrade_points += 1
             comradel "Exactly how I think."
+        "Liberalism!":
+            comradel "The philosophy of cowards!"
+            comradel "The ruling classes will always turn liberalism to their own ends."
         "Democracy!":
             comradel "You Amerikanskis believe so dearly in your dying system."
             comradel "While your poor die in the streets, you celebrate their right to vote."
@@ -109,7 +116,7 @@ label comrade_good_end:
     comradel "I call you comrade and equal now."
     scene bg comrade_good with fade
 
-    pause 5
+    pause 10
 
     return
 
@@ -119,6 +126,6 @@ label comrade_bad_end:
     comradel "You will not be a part of our glorious revolution."
     scene bg comrade_bad with fade
 
-    pause 5
+    pause 10
 
     return

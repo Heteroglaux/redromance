@@ -69,7 +69,7 @@ label start:
 
 label clue1_comrade:
 
-    virginia "Here's a wax stamp with this symbol."
+    virginia "Here's a wax stamp with hammer and sickle."
     virginia "Maybe the symbol can lead me somewhere?"
 
     call screen comrade_street
