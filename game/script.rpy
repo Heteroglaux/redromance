@@ -105,7 +105,7 @@ label comrade_wrong_building:
 
 label natasha_wrong_building:
     
-    virginia "Hm-m-m, I don't think I need go there."
+    virginia "Hmm, I don't think I need go there."
 
     call screen natasha_street
 
@@ -114,7 +114,7 @@ label natasha_wrong_building:
 
 label ulyana_wrong_building:
     
-    virginia "Hm-m-m, I don't think I need go there."
+    virginia "Hmm, I don't think I need go there."
 
     call screen ulyana_street
 
