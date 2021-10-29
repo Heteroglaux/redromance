@@ -20,19 +20,19 @@ screen library_clue:
 label library:
     scene bg library with fade
 
-    virginia "I entered a big andquiet library."
-    virginia "There are not that many people, maybe I can ask around?"
+    virginia "I entered a large, quiet library."
+    virginia "There aren't many people here. Maybe I can ask around?"
 
     pause 0.5
 
-    virginia "The letter itselft..."
+    virginia "The letter!"
     virginia "I think it can tell me something about its author."
 
     call screen letter_comrade
 
 label comrade_clue2:
      
-     virginia "Here's a quote in the end of the letter..."
+     virginia "There's a quote in the end of the letter..."
      virginia "The last capitalist we hang shall be the one who sold us the rope."
 
      call screen library_clue
@@ -41,52 +41,57 @@ label comrade:
     $ comrade_points = 0
     scene bg library clue with dissolve
 
-    virginia "The Capital!"
-    virginia "The quote is definetely from the book."
-    "I heard a pleasand voice behind my back."
-    "???" "I see you have a good taste in literature."
+    virginia "Das Kapital!"
+    virginia "The quote is definitely from the book."
+    "I heard a pleasant voice behind my back."
+    "???" "I see you have a excellent taste in literature."
     virginia "Excuse me?"
-    "???" "It's Marx! I've read the book dozens of time."
-    virginia "Maybe even quoted it... Somewhere?"
-    "???" "Oh, definetely!"
+    "???" "It's Marx! I've read the book dozens of times."
+    virginia "Maybe even quoted it somewhere?"
+    "???" "Oh, without a doubt!"
     virginia "My name is Virginia."
-    comradel "You can call me a comrade, Virginia. Comrade L."
+    comradel "You may call me a comrade, Virginia. Comrade L."
     virginia "I was looking for someone who wrote me a letter."
     comradel "I think you were searching for something else."
     comradel "A better place, maybe?"
+    comradel "A place where the worker is celebrated, perhaps."
     virginia "..."
     "Comrade L. took the book and opened it on a random page."
-    comradel "I think, the world nowadays is corrupted. Common people aren't living the lifes they deserve. Poorer only become poorer, while the rich constantly get richer."
-    comradel "You know what the means of production are? How do you think, who should own them?"
+    comradel "As you must know, the world nowadays is corrupt. Common people aren't living the lives they deserve. The poor only become poorer, while the rich constantly get richer."
+    comradel "Yet who controls the means production? Who provides the sweat and toil? Whom do you think should receive the rewards of their work?"
 
     menu:
-        "Whoever owns them by law.":
-            comradel "The law only supports the unjust system!"
-        "The working class":
+        "Whomever owns them by law.":
+            comradel "You speak like a child. The law exists only to support the unjust system!"
+        "The working class.":
             $ comrade_points += 1
-            comradel "Exactly how I think."
+            comradel "You are wise for your years, Miss Virginia. Indeed, the workers should own their own work."
         "Everyone!":
-            comradel "Everyone? Even the burgies?"
+            comradel "Everyone? Even the bourgeois? Even those who fatten themselves on our labor?"
 
     "What do you think about sex?"        
     menu:
         "Why do you ask?":
-            comradel "..."
-        "There's no sex in USSR.":
+            comradel "Your evasiveness does not inspire confidence."
+        "There is no sex in the USSR.":
             $ comrade_points += 1
-            comradel "..."
+            comradel "Indeed. Sex contributes nothing to the glory of the worker."
         "I like sex. Why not?":
-            comradel "..."
+            comradel "I see you are still a child, wasting your time with idle fancies."
+            comradel "I was once like you. Now I derive pleasure only from the struggle of the proletariat."
 
     "What is the best political regime?"        
     menu:
         "Liberalism!":
-            comradel "..."
-        "Dictotorship of proletariat!":
+            comradel "The philosophy of cowards!"
+            comradel "The ruling classes will always turn liberalism to their own ends."
+        "Dictatorship of the proletariat!":
             $ comrade_points += 1
             comradel "Exactly how I think."
-        "Democrasy!":
-            comradel "..."
+        "Democracy!":
+            comradel "You Amerikanskis believe so dearly in your dying system."
+            comradel "While your poor die in the streets, you celebrate their right to vote."
+            comradel "Little comfort is democracy to those who are forgotten their country."
 
     comradel "Well, to be honest..."
 
@@ -98,7 +103,10 @@ label comrade:
     return
 
 label comrade_good_end:
-    comradel "It was me. I've sent the letter."
+    comradel "It was I. I sent the letter."
+    comradel "I hoped that it would reach one with a sound mind and brave heart."
+    comradel "Miss Virginia. I welcome you to the Union of Soviet Socialist Republics."
+    comradel "I call you comrade and equal now."
     scene bg comrade_good with fade
 
     pause 5
@@ -106,7 +114,9 @@ label comrade_good_end:
     return
 
 label comrade_bad_end:
-    comradel "You better go. USSR is not a place for you to be."
+    comradel "You had better go. The USSR is not a place for you to be, Amerikanski."
+    comradel "Go back to your precious Amerika and live in your excesses."
+    comradel "You will not be a part of our glorious revolution."
     scene bg comrade_bad with fade
 
     pause 5
